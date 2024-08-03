@@ -1,7 +1,7 @@
 import { TryCatch } from "../middlewares/error.js";
 import { WantedList } from "../models/wantedList.js";
-import { uploadFilesToCloudinary } from "../server/utils/features.js";
-import { ErrorHandler } from "../server/utils/utility.js";
+import { uploadFilesToCloudinary } from "../utils/features.js";
+import { ErrorHandler } from "../utils/utility.js";
 
 const getAllWantedList = TryCatch(async (req,res) => {
     const wantedList = await WantedList.find().sort({ createdAt: -1});
